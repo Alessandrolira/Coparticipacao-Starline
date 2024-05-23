@@ -1,0 +1,278 @@
+.Filtro_dos_dados {
+    background-image: url('./assets/imagem/Imagem-Fundo-Celular.jpg  ');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'poppins';
+    font-weight: 400;
+}
+
+.caixa-checkboxes {
+    overflow-y: scroll; /* Adiciona barra de rolagem vertical */
+    border: 1px solid #ccc;
+    padding: 10px;
+    border: none;
+    height: 8em;
+}
+
+.Filtro_dos_dados {
+    padding: 1em;
+}
+
+.cabecalho {
+    margin-top: 4em;
+    margin-bottom: 2em;
+    background: linear-gradient(90deg, rgba(17,34,77,1) 0%, rgba(91,132,196,1) 100%);
+    width: 90%;
+    padding: 0.8em;
+    border-radius: 1em;
+}
+
+.cabecalho_menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cabecalho_menu-home--link, .cabecalho_menu-login--link{
+    text-decoration: none;
+    font-family: 'Montserrat';
+    color: white;
+    font-size: 0.6em;
+    transition: 2s;
+}
+
+.titulo {
+    margin-bottom: 2em;
+    font-family: 'Montserrat';
+    font-weight: 600;
+}
+
+.formularioDeEnvio {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.formularioDeEnvio_Procedimentos {
+    display: flex;
+    flex-direction: column;
+}
+
+.formularioDeEnvio_Procedimentos--titulo {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1em;
+    font-size: 1em;
+}
+
+.formularioDeEnvio_Procedimentos--quadro {
+    margin-bottom: 2em;
+    background: linear-gradient(90deg, rgba(17,34,77,1) 0%, rgba(91,132,196,1) 100%);
+    padding: 1em;
+    border-radius: 1em;
+    color: white;
+}
+
+.QtdProcedimento{
+    width: 15%;
+    margin-right: 1em;
+    margin-bottom: 0.5em;
+    text-align: center;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    height: 0.9em;
+}
+
+.textLabel, .checkboxLabel {
+    font-size: 0.7em;
+}
+
+.Botao_Enviar_Dados, .Botao_Gerar_PDF {
+    background: linear-gradient(177deg, rgba(255,189,137,1) 0%, rgba(249,129,37,1) 100%);
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 1em;
+    color: black;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    margin-bottom: 2em;
+    color: black;
+    transition: 500ms;
+    width: 10em;
+}
+
+.Botao_Gerar_PDF {
+    margin: 2em auto;
+    text-align: center;
+    justify-content: center;
+}
+
+.tabelaValores {
+    border-top: 1px solid black;
+    padding-top: 2em;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.TabelaValores--Resumo-dos-Procedimentos, .TabelaValores--Operadora {
+    border: 1px solid black;
+    width: 100%;
+}
+
+.tabelaValores--Titulo{
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 2em;
+}
+
+.tabelaValores_Linhas-Procedimento-QTD, .tabelaValores_Linhas-Procedimento-QTD-Cabecalho, .TabelaValores--Operadora_Linhas-Procedimento-QTD, .TabelaValores--Operadora_Linhas-Procedimento-QTD-Cabecalho{
+    border: 1px solid black;
+    padding: 0.2em 0;
+}
+
+.tabelaValores_Linhas-QTD, .tabelaValores_Linhas-QTD-Cabecalho, .TabelaValores--Operadora_Linhas-QTD{
+    text-align: center;
+}
+
+.tabelaValores_Linhas-Procedimento-QTD-Cabecalho, .TabelaValores--Operadora_Linhas-Procedimento-QTD-Cabecalho {
+    background-color: #d6d6d6; 
+    color: black;
+}
+
+.TabelaValores--Operadora_Linhas-QTD {
+    font-size: 0.8em;
+}
+
+.tabelaValores_Linhas-Procedimento-Cabecalho, .tabelaValores_Linhas-Procedimento, .TabelaValores--Operadora_Linhas-Procedimento, .TabelaValores--Operadora_Linhas-Procedimento-Cabecalho, .TabelaValores--Operadora_Linhas-Procedimento-Cabecalho-Procedimento, .TabelaValores--Operadora_Linhas-Procedimento-QTD, .tabelaValores_Linhas-Procedimento-QTD, .tabelaValores_Linhas-Procedimento-QTD-Cabecalho{
+    padding-left: 0.3em;
+    font-size: 0.7em;
+}
+
+.TabelaValores--Operadora {
+    margin-top: 0.5em;
+}
+
+.Titulo__tabela-Operadora{
+    margin-top: 1em;
+}
+
+.Titulo__tabela-Operadora{
+    font-size: 2em;
+}
+
+.Titulo__tabela-Plano{
+    color: gray;
+    margin-top: 0.4em;
+}
+
+.TabelaValores--Operadora_Linhas-Procedimento-Cabecalho {
+    text-align: center;
+}
+
+.cabecalho-tabela {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.valorTotalGasto {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: 700;
+    color: orange;
+}
+
+.espacamento {
+    color: white;
+}
+
+.separadorDetabelas {
+    margin-top: 2em;
+    border-color: orange;
+}
+
+@media screen and (min-width: 760px) {
+
+    .Filtro_dos_dados {
+        background-image: url(./assets/imagem/Imagem-Fundo.jpg);
+    }
+
+    .cabecalho {
+        margin-top: 6em;
+    }
+
+    .cabecalho_menu-home--link, .cabecalho_menu-login--link{
+        font-size: 1em;
+        margin: 0 1em;
+    }
+
+    .cabecalho_menu-home--link:hover, .cabecalho_menu-login--link:hover{
+        color: orange;
+        transform: scale(1.2);
+    }
+
+    .titulo {
+        font-size: 1.5em;
+    }
+
+    .formularioDeEnvio_Procedimentos--titulo {
+        font-size: 1em;
+    }
+
+    .formularioDeEnvio{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .formularioDeEnvio_Procedimentos{
+        width: 30%;
+    }
+
+    .formularioDeEnvio {
+        width: 90%;
+    }
+
+    .textLabel, .checkboxLabel {
+        font-size: 0.6em;
+    }
+
+    .TabelaValores--Resumo-dos-Procedimentos{
+        width: 30%;
+    }
+
+    .TabelaValores--Operadora_Linhas-QTD {
+        font-size: 1em;
+    }
+
+    .tabelaValores_Linhas-Procedimento-Cabecalho, .tabelaValores_Linhas-Procedimento, .TabelaValores--Operadora_Linhas-Procedimento, .TabelaValores--Operadora_Linhas-Procedimento-Cabecalho, .TabelaValores--Operadora_Linhas-Procedimento-Cabecalho-Procedimento, .TabelaValores--Operadora_Linhas-Procedimento-QTD, .tabelaValores_Linhas-Procedimento-QTD, .tabelaValores_Linhas-Procedimento-QTD-Cabecalho{
+        padding-left: 0.3em;
+        font-size: 1em;
+    }
+
+    .Botao_Enviar_Dados:hover, .Botao_Gerar_PDF:hover{
+        cursor: pointer;
+        transform: scale(1.2);
+    }
+
+    .cabecalho-tabela {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+}
+
+@media screen and (min-width: 1800px) {
+
+    .cabecalho {
+        margin-top: 10em;
+    }
+}

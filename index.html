@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo de Coparticipação</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+
+</head>
+
+<body>
+    <section class="Filtro_dos_dados">
+        <header class="cabecalho">
+            <ul class="cabecalho_menu">
+                <a href="https://starlinecorretora.com.br/" class="cabecalho_menu-home--link">
+                    <li class="cabecalho_menu-home">Home</li>
+                </a>
+                <!--<a href="#" class="cabecaho_login--administrador visible-mobile"><img src="./assets/imagem/Login-mobile.png" alt="Login Administrados" class="cabecalho_login--administrador--img"></a>-->
+                <a href="https://starlinecorretora.com.br/" class="cabecalho_menu-login--link">
+                    <li class="cabecalho_menu-login visible-desktop">Login Administrador</li>
+                </a>
+            </ul>
+        </header>
+
+        <h1 class="titulo">Calculo de Comparticipação</h1>
+
+        <div class="formularioDeEnvio">
+
+            <div class="formularioDeEnvio_Procedimentos">
+                <h2 class="formularioDeEnvio_Procedimentos--titulo">Procedimentos</h2>
+                <div class="formularioDeEnvio_Procedimentos--quadro">
+                    <div class="textLabel"><input type="text" name="consulta" class="QtdProcedimento"
+                            id="qtd-consultas"><label name="consulta" class="labelQtdProcedimento">Consulta</label>
+                    </div>
+                    <div class="textLabel"><input type="text" name="exames_especiais" class="QtdProcedimento"
+                            id="qtd-exames_especiais"><label name="exames_especiais" class="labelQtdProcedimento">Exames
+                            Especiais</label></div>
+                    <div class="textLabel"><input type="text" name="exames_simples" class="QtdProcedimento"
+                            id="qtd-exames_simples"><label name="exames_simples" class="labelQtdProcedimento">Exames
+                            Simples</label></div>
+                    <div class="textLabel"><input type="text" name="internacao" class="QtdProcedimento"
+                            id="qtd-internacao"><label name="internacao" class="labelQtdProcedimento">Internação</label>
+                    </div>
+                    <div class="textLabel"><input type="text" name="prontoSocorro" class="QtdProcedimento"
+                            id="qtd-pronto_socorro"><label name="prontoSocorro" class="labelQtdProcedimento">Pronto
+                            Socorro</label></div>
+                    <div class="textLabel"><input type="text" name="terapia" class="QtdProcedimento"
+                            id="qtd-terapia"><label name="terapia" class="labelQtdProcedimento">Terapia</label></div>
+                </div>
+            </div>
+
+            <form class="formularioDeEnvio_Procedimentos">
+                <h2 class="formularioDeEnvio_Procedimentos--titulo">Operadoras</h2>
+                <div class="formularioDeEnvio_Procedimentos--quadro">
+                    <div class="caixa-checkboxes">
+                        <input type="checkbox" id="checkboxAmil" name="checkbox2" class="checkbox" value="Amil" onchange="mostrarPlanos()">
+                        <label for="checkbox2" class="checkboxLabel">Amil</label><br>
+                        <input type="checkbox" id="checkboxBradesco" name="checkbox1" class="checkbox" value="Bradesco" onchange="mostrarPlanos()">
+                        <label for="checkbox1" class="checkboxLabel">Bradesco</label><br>
+                        <input type="checkbox" id="checkboxOmint" name="checkbox1" class="checkbox" value="Omint" onchange="mostrarPlanos()">
+                        <label for="checkbox1" class="checkboxLabel">Omint</label><br>
+                        <input type="checkbox" id="checkboxPorto" name="checkbox1" class="checkbox" value="Porto Seguro" onchange="mostrarPlanos()">
+                        <label for="checkbox1" class="checkboxLabel">Porto Seguro</label><br>
+                        <input type="checkbox" id="checkboxUnimed" name="checkbox1" class="checkbox" value="Seguros Unimed" onchange="mostrarPlanos()">
+                        <label for="checkbox1" class="checkboxLabel">Seguros Unimed</label><br>
+                        <input type="checkbox" id="checkboxSulamerica" name="checkbox1" class="checkbox" value="Sulamerica" onchange="mostrarPlanos()">
+                        <label for="checkbox1" class="checkboxLabel">Sulamerica</label><br>
+                        <!-- Adicione mais checkboxes conforme necessário -->
+                    </div>
+                </div>
+            </form>
+
+            <form action="" class="formularioDeEnvio_Procedimentos" id="Operadoras">
+                <div class="formularioDeEnvio_Procedimentos_filho" id="planosContainer">
+                    <h2 class="formularioDeEnvio_Procedimentos--titulo">Produtos</h2>
+                    <div class="formularioDeEnvio_Procedimentos--quadro">
+                        <div class="caixa-checkboxes" id="planosCheckbox" style="display: block;">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <button type="submit" class="Botao_Enviar_Dados" onclick="EnviarDados()">Enviar Dados</button>
+
+        <section class="tabelaValores" id="trechoParaPDF" style="margin-left: 20px; font-family: 'Montserrat';">
+            <h1 class="tabelaValores--Titulo">Tabela de Valores</h1>
+            <table class="TabelaValores--Resumo-dos-Procedimentos">
+                <tr class="tabelaValores_Linhas-cabecalho">
+                    <td
+                        class="tabelaValores_Linhas-Procedimento-QTD-Cabecalho tabelaValores_Linhas-Procedimento-Cabecalho">
+                        Procedimentos</td>
+                    <td class="tabelaValores_Linhas-Procedimento-QTD-Cabecalho tabelaValores_Linhas-QTD-Cabecalho">QTD.
+                    </td>
+                </tr>
+                <tr class="tabelaValores_Linhas">
+                    <td class="tabelaValores_Linhas-Procedimento-QTD tabelaValores_Linhas-Procedimento">Consultas</td>
+                    <td class="tabelaValores_Linhas-Procedimento-QTD tabelaValores_Linhas-QTD"
+                        id="qtd-consultas-enviada"></td>
+                </tr>
+                <tr class="tabelaValores_Linhas">
+                    <td class="tabelaValores_Linhas-Procedimento-QTD tabelaValores_Linhas-Procedimento">Exames Especiais
+                    </td>
+                    <td class="tabelaValores_Linhas-Procedimento-QTD tabelaValores_Linhas-QTD"
+                        id="qtd-exames_especiais-enviada"></td>
+                </tr>
+                <tr class="tabelaValores_Linhas">
+                    <td class="tabelaValores_Linhas-Procedimento-QTD tabelaValores_Linhas-Procedimento">Exames Simples
+                    </td>
+                    <td class="tabelaValores_Linhas-Procedimento-QTD tabelaValores_Linhas-QTD"
+                        id="qtd-exames_simples-enviada"></td>
+                </tr>
+                <tr class="tabelaValores_Linhas">
+                    <td class="tabelaValores_Linhas-Procedimento-QTD tabelaValores_Linhas-Procedimento">Internação</td>
+                    <td class="tabelaValores_Linhas-Procedimento-QTD tabelaValores_Linhas-QTD"
+                        id="qtd-internacao-enviada"></td>
+                </tr>
+                <tr class="tabelaValores_Linhas">
+                    <td class="tabelaValores_Linhas-Procedimento-QTD tabelaValores_Linhas-Procedimento">Pronto Socorro
+                    </td>
+                    <td class="tabelaValores_Linhas-Procedimento-QTD tabelaValores_Linhas-QTD"
+                        id="qtd-pronto_socorro-enviada"></td>
+                </tr>
+                <tr class="tabelaValores_Linhas">
+                    <td class="tabelaValores_Linhas-Procedimento-QTD tabelaValores_Linhas-Procedimento">Terapia</td>
+                    <td class="tabelaValores_Linhas-Procedimento-QTD tabelaValores_Linhas-QTD" id="qtd-terapia-enviada">
+                    </td>
+                </tr>
+            </table>
+
+            <div class="tabelas" id="tabelas0"></div>
+            <div class="tabelas" id="tabelas1"></div>
+            <div class="tabelas" id="tabelas2"></div>
+            <div class="tabelas" id="tabelas3"></div>
+            <div class="tabelas" id="tabelas4"></div>
+            
+        <div class="tabelas" id="tabelas"></div>
+        <hr>
+    </section>
+    <button onclick="gerarPDF()" class="Botao_Gerar_PDF">Gerar PDF</button>
+    <p class="espacamento">espaçamento</p>
+    <script src="./script.js"></script>
+</body>
+
+</html>
