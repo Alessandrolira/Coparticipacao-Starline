@@ -316,7 +316,7 @@ const planosPorOperadora = {
     Bradesco: ["FCEX_E_e_FCQX_A_", "TNI1_E_e_TNI2_A_", "TNME_E_e_TNMQ_A_", "TNNI_E_TNMI_A_TNMM_A_e_TNMN_A_", "TNP4_A_TNP6_A_e_TNP8_A_", "TNWE_E_e_TNWQ_A_"],
     Porto: ["Bronze_Pro", "Diamente_Pro_20_por_cento", "Ouro_Pro", "Prata_Pro",],
     Unimed: ["COMPACTO", "COMPLETO", "EFETIVO", "SÊNIOR", "SUPERIOR", "SUPERIOR_PLUS"],
-    Sulmaerica: ["Clássico", "Direto", "Especial", "Exato", "Executivo", "Prestigie"]
+    Sulamerica: ["Clássico", "Direto", "Especial", "Exato", "Executivo", "Prestigie"]
 
 }
 
