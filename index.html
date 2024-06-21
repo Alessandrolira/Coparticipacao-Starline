@@ -28,36 +28,37 @@
                 <a href="https://starlinecorretora.com.br/" class="cabecalho_menu-home--link">
                     <li class="cabecalho_menu-home">Home</li>
                 </a>
-                <!--<a href="#" class="cabecaho_login--administrador visible-mobile"><img src="./assets/imagem/Login-mobile.png" alt="Login Administrados" class="cabecalho_login--administrador--img"></a>-->
+                <!--<a href="#" class="cabecaho_login--administrador visible-mobile"><img src="./assets/imagem/Login-mobile.png" alt="Login Administrados" class="cabecalho_login--administrador--img"></a>
                 <a href="https://starlinecorretora.com.br/" class="cabecalho_menu-login--link">
                     <li class="cabecalho_menu-login visible-desktop">Login Administrador</li>
                 </a>
+            -->
             </ul>
         </header>
 
-        <h1 class="titulo">Calculo de Comparticipação</h1>
+        <h1 class="titulo">Calculo de Coparticipação</h1>
 
         <div class="formularioDeEnvio">
 
             <div class="formularioDeEnvio_Procedimentos">
                 <h2 class="formularioDeEnvio_Procedimentos--titulo">Procedimentos</h2>
                 <div class="formularioDeEnvio_Procedimentos--quadro">
-                    <div class="textLabel"><input type="text" name="consulta" class="QtdProcedimento"
+                    <div class="textLabel"><input type="number" name="consulta" class="QtdProcedimento"
                             id="qtd-consultas"><label name="consulta" class="labelQtdProcedimento">Consulta</label>
                     </div>
-                    <div class="textLabel"><input type="text" name="exames_especiais" class="QtdProcedimento"
+                    <div class="textLabel"><input type="number" name="exames_especiais" class="QtdProcedimento"
                             id="qtd-exames_especiais"><label name="exames_especiais" class="labelQtdProcedimento">Exames
                             Especiais</label></div>
-                    <div class="textLabel"><input type="text" name="exames_simples" class="QtdProcedimento"
+                    <div class="textLabel"><input type="number" name="exames_simples" class="QtdProcedimento"
                             id="qtd-exames_simples"><label name="exames_simples" class="labelQtdProcedimento">Exames
                             Simples</label></div>
-                    <div class="textLabel"><input type="text" name="internacao" class="QtdProcedimento"
+                    <div class="textLabel"><input type="number" name="internacao" class="QtdProcedimento"
                             id="qtd-internacao"><label name="internacao" class="labelQtdProcedimento">Internação</label>
                     </div>
-                    <div class="textLabel"><input type="text" name="prontoSocorro" class="QtdProcedimento"
+                    <div class="textLabel"><input type="number" name="prontoSocorro" class="QtdProcedimento"
                             id="qtd-pronto_socorro"><label name="prontoSocorro" class="labelQtdProcedimento">Pronto
                             Socorro</label></div>
-                    <div class="textLabel"><input type="text" name="terapia" class="QtdProcedimento"
+                    <div class="textLabel"><input type="number" name="terapia" class="QtdProcedimento"
                             id="qtd-terapia"><label name="terapia" class="labelQtdProcedimento">Terapia</label></div>
                 </div>
             </div>
@@ -70,8 +71,6 @@
                         <label for="checkbox2" class="checkboxLabel">Amil</label><br>
                         <input type="checkbox" id="checkboxBradesco" name="checkbox1" class="checkbox" value="Bradesco" onchange="mostrarPlanos()">
                         <label for="checkbox1" class="checkboxLabel">Bradesco</label><br>
-                        <input type="checkbox" id="checkboxOmint" name="checkbox1" class="checkbox" value="Omint" onchange="mostrarPlanos()">
-                        <label for="checkbox1" class="checkboxLabel">Omint</label><br>
                         <input type="checkbox" id="checkboxPorto" name="checkbox1" class="checkbox" value="Porto Seguro" onchange="mostrarPlanos()">
                         <label for="checkbox1" class="checkboxLabel">Porto Seguro</label><br>
                         <input type="checkbox" id="checkboxUnimed" name="checkbox1" class="checkbox" value="Seguros Unimed" onchange="mostrarPlanos()">
@@ -88,6 +87,16 @@
                     <h2 class="formularioDeEnvio_Procedimentos--titulo">Produtos</h2>
                     <div class="formularioDeEnvio_Procedimentos--quadro">
                         <div class="caixa-checkboxes" id="planosCheckbox" style="display: block;">
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <form action="" class="formularioDeEnvio_Procedimentos" id="Planos">
+                <div class="formularioDeEnvio_Procedimentos_filho" id="porcentagemContainer">
+                    <h2 class="formularioDeEnvio_Procedimentos--titulo">Porcentagens</h2>
+                    <div class="formularioDeEnvio_Procedimentos--quadro">
+                        <div class="caixa-checkboxes" id="porcentagemCheckbox" style="display: block;">
                         </div>
                     </div>
                 </div>
@@ -147,7 +156,6 @@
             <div class="tabelas" id="tabelas3"></div>
             <div class="tabelas" id="tabelas4"></div>
             
-        <div class="tabelas" id="tabelas"></div>
         <hr>
     </section>
     <button onclick="gerarPDF()" class="Botao_Gerar_PDF">Gerar PDF</button>
