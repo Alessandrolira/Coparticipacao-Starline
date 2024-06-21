@@ -40,6 +40,32 @@ function gerarPDF() {
 
 //DADOS
 const valoresProcedimentos = {
+    Omint: {
+        SC1: {
+            Consulta: 75,
+            Exames_Especiais: 170,
+            Exames_Simples: 70,
+            Internação: 500,
+            Pronto_Socorro: 140,
+            Terapia: 70
+        },
+        C16: {
+            Consulta: 150,
+            Exames_Especiais: 200,
+            Exames_Simples: 80,
+            Internação: 570,
+            Pronto_Socorro: 320,
+            Terapia: 90
+        },
+        C19: {
+            Consulta: 170,
+            Exames_Especiais: 350,
+            Exames_Simples: 90,
+            Internação: 700,
+            Pronto_Socorro: 350,
+            Terapia: 150
+        }
+    },
     Amil: {
         Amil_Fácil_110: {
             Consulta: 25,
@@ -517,6 +543,7 @@ const valoresProcedimentos = {
 }
 
 const planosPorOperadora = {
+    Omint: ["SC1", "C16", "C19"],
     Amil: ["Amil_Fácil_110", "Amil_Fácil_S60_e_S80", "Amil_One_S2500", "Amil_One_S6500_R1", "Amil_S380", "Amil_S450_e_S580", "Amil_S750"],
     Bradesco: ["FECXbFCER_E_e_FQCXbFCQR_A_", "TN1IbTERI_E_e_TN2IbTQRI_A_", "TENMbTRME_E_e_TQNMbTRMQ_A_", "TNNI_E_TNMI_A_TNMM_A_e_TNMN_A_", "TPN4_A_TPN6_A_e_TCN6_A_e_TCN8_A_e_TPN8_A_e_TCNX_A_", "TNEWbTRWE_E_e_TNQWbTRWQ_A_"],
     Porto: ["LINHA_PORTO_SAUDE_P200", "LINHA_PORTO_SAUDE_P300", "LINHA_PORTO_SAUDE_P400", "LINHA_PORTO_SAUDE_P450", "LINHA_PORTO_SAUDE_P500", "LINHA_TRADICIONAL_Bronze", "LINHA_TRADICIONAL_Prata", "LINHA_TRADICIONAL_Ouro_Mais", "LINHA_TRADICIONAL_Ouro_Max", "LINHA_TRADICIONAL_Diamante_R1", "LINHA_TRADICIONAL_Diamante_R2", "LINHA_PRO_Bronze_Pro", "LINHA_PRO_Diamente_Pro", "LINHA_PRO_Ouro_Pro", "LINHA_PRO_Prata_Pro",],
