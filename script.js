@@ -539,6 +539,40 @@ const valoresProcedimentos = {
             Pronto_Socorro: 350,
             Terapia: 150
         }
+    },
+    NotreDame_Intermedica: {
+        Linha_Smart: {
+            Consulta: 26,
+            Exames_Especiais: 105,
+            Exames_Simples: 21,
+            Internação: 185,
+            Pronto_Socorro: 52,
+            Terapia: 83
+        },
+        Linha_500: {
+            Consulta: 31,
+            Exames_Especiais: 115,
+            Exames_Simples: 26,
+            Internação: 260,
+            Pronto_Socorro: 62,
+            Terapia: 83
+        },
+        Linha_700: {
+            Consulta: 36,
+            Exames_Especiais: 125,
+            Exames_Simples: 31,
+            Internação: 310,
+            Pronto_Socorro: 72,
+            Terapia: 93
+        },
+        Linha_900: {
+            Consulta: 43,
+            Exames_Especiais: 140,
+            Exames_Simples: 38,
+            Internação: 540,
+            Pronto_Socorro: 80,
+            Terapia: 110
+        }
     }
 }
 
@@ -548,7 +582,8 @@ const planosPorOperadora = {
     Bradesco: ["FECXbFCER_E_e_FQCXbFCQR_A_", "TN1IbTERI_E_e_TN2IbTQRI_A_", "TENMbTRME_E_e_TQNMbTRMQ_A_", "TNNI_E_TNMI_A_TNMM_A_e_TNMN_A_", "TPN4_A_TPN6_A_e_TCN6_A_e_TCN8_A_e_TPN8_A_e_TCNX_A_", "TNEWbTRWE_E_e_TNQWbTRWQ_A_"],
     Porto: ["LINHA_PORTO_SAUDE_P200", "LINHA_PORTO_SAUDE_P300", "LINHA_PORTO_SAUDE_P400", "LINHA_PORTO_SAUDE_P450", "LINHA_PORTO_SAUDE_P500", "LINHA_TRADICIONAL_Bronze", "LINHA_TRADICIONAL_Prata", "LINHA_TRADICIONAL_Ouro_Mais", "LINHA_TRADICIONAL_Ouro_Max", "LINHA_TRADICIONAL_Diamante_R1", "LINHA_TRADICIONAL_Diamante_R2", "LINHA_PRO_Bronze_Pro", "LINHA_PRO_Diamente_Pro", "LINHA_PRO_Ouro_Pro", "LINHA_PRO_Prata_Pro",],
     Unimed: ["COMPACTO", "COMPLETO", "EFETIVO", "SÊNIOR", "SUPERIOR", "SUPERIOR_PLUS"],
-    Sulamerica: ["Clássico", "Direto", "Especial", "Exato", "Executivo", "Prestigie"]
+    Sulamerica: ["Clássico", "Direto", "Especial", "Exato", "Executivo", "Prestigie"],
+    NotreDame_Intermedica: ["Linha_Smart", "Linha_500", "Linha_700", "Linha_900"]
 }
 
 const porcentagens = {
