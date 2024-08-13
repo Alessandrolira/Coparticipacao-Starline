@@ -66,6 +66,32 @@ const valoresProcedimentos = {
             Terapia: 150
         }
     },
+    Alice: {
+        Equilibrio: {
+            Consulta: 45,
+            Exames_Especiais: 90,
+            Exames_Simples: 10,
+            Internação: 210,
+            Pronto_Socorro: 60,
+            Terapia: 35
+        },
+        Conforto: {
+            Consulta: 70,
+            Exames_Especiais: 100,
+            Exames_Simples: 15,
+            Internação: 280,
+            Pronto_Socorro: 70,
+            Terapia: 45
+        },
+        Exclusivo: {
+            Consulta: 100,
+            Exames_Especiais: 150,
+            Exames_Simples: 30,
+            Internação: 440,
+            Pronto_Socorro: 110,
+            Terapia: 60
+        }
+    },
     Amil: {
         Amil_Fácil_110: {
             Consulta: 25,
@@ -125,7 +151,7 @@ const valoresProcedimentos = {
         }
     },
     Bradesco: {
-        FECXbFCER_E_e_FQCXbFCQR_A_: {
+        FECXwFCER_E_e_FQCXwFCQR_A_: {
             Consulta: 30,
             Exames_Especiais: 120,
             Exames_Simples: 45,
@@ -133,7 +159,7 @@ const valoresProcedimentos = {
             Pronto_Socorro: 90,
             Terapia: 30
         },
-        TN1IbTERI_E_e_TN2IbTQRI_A_: {
+        TN1IwTERI_E_e_TN2IwTQRI_A_: {
             Consulta: 35,
             Exames_Especiais: 140,
             Exames_Simples: 52.50,
@@ -141,7 +167,7 @@ const valoresProcedimentos = {
             Pronto_Socorro: 105,
             Terapia: 35
         },
-        TENMbTRME_E_e_TQNMbTRMQ_A_: {
+        TENMwTRME_E_e_TQNMwTRMQ_A_: {
             Consulta: 30,
             Exames_Especiais: 120,
             Exames_Simples: 45,
@@ -165,7 +191,7 @@ const valoresProcedimentos = {
             Pronto_Socorro: 320,
             Terapia: 160
         },
-        TNEWbTRWE_E_e_TNQWbTRWQ_A_: {
+        TNEWwTRWE_E_e_TNQWwTRWQ_A_: {
             Consulta: 30,
             Exames_Especiais: 120,
             Exames_Simples: 45,
@@ -577,9 +603,10 @@ const valoresProcedimentos = {
 }
 
 const planosPorOperadora = {
+    Alice: ["Equilibrio", "Conforto", "Exclusivo"],
     Omint: ["SC1", "C16", "C19"],
     Amil: ["Amil_Fácil_110", "Amil_Fácil_S60_e_S80", "Amil_One_S2500", "Amil_One_S6500_R1", "Amil_S380", "Amil_S450_e_S580", "Amil_S750"],
-    Bradesco: ["FECXbFCER_E_e_FQCXbFCQR_A_", "TN1IbTERI_E_e_TN2IbTQRI_A_", "TENMbTRME_E_e_TQNMbTRMQ_A_", "TNNI_E_TNMI_A_TNMM_A_e_TNMN_A_", "TPN4_A_TPN6_A_e_TCN6_A_e_TCN8_A_e_TPN8_A_e_TCNX_A_", "TNEWbTRWE_E_e_TNQWbTRWQ_A_"],
+    Bradesco: ["FECXwFCER_E_e_FQCXwFCQR_A_", "TN1IwTERI_E_e_TN2IwTQRI_A_", "TENMwTRME_E_e_TQNMwTRMQ_A_", "TNNI_E_TNMI_A_TNMM_A_e_TNMN_A_", "TPN4_A_TPN6_A_e_TCN6_A_e_TCN8_A_e_TPN8_A_e_TCNX_A_", "TNEWwTRWE_E_e_TNQWwTRWQ_A_"],
     Porto: ["LINHA_PORTO_SAUDE_P200", "LINHA_PORTO_SAUDE_P300", "LINHA_PORTO_SAUDE_P400", "LINHA_PORTO_SAUDE_P450", "LINHA_PORTO_SAUDE_P500", "LINHA_TRADICIONAL_Bronze", "LINHA_TRADICIONAL_Prata", "LINHA_TRADICIONAL_Ouro_Mais", "LINHA_TRADICIONAL_Ouro_Max", "LINHA_TRADICIONAL_Diamante_R1", "LINHA_TRADICIONAL_Diamante_R2", "LINHA_PRO_Bronze_Pro", "LINHA_PRO_Diamente_Pro", "LINHA_PRO_Ouro_Pro", "LINHA_PRO_Prata_Pro",],
     Unimed: ["COMPACTO", "COMPLETO", "EFETIVO", "SÊNIOR", "SUPERIOR", "SUPERIOR_PLUS"],
     Sulamerica: ["Clássico", "Direto", "Especial", "Exato", "Executivo", "Prestigie"],
@@ -633,7 +660,7 @@ function mostrarPlanos() {
         planoElement.value = plano;
         planoElement.id = plano;
         planoElement.onchange = mostrarPorcentagem;
-        plano = plano.replace(/_/g, " ").replace(" por cento", "%").replace(/b/g, "/")
+        plano = plano.replace(/_/g, " ").replace(" por cento", "%").replace(/w/g, "/")
         const label = document.createElement("label");
         label.htmlFor = plano;
         label.className = "checkboxLabel"
@@ -922,7 +949,7 @@ function EnviarDados() {
                             <div class="cabecalho-tabela">
                                 <div class="cabecalho-tabela-texto">
                                     <h1 class="Titulo__tabela-Operadora">${resultado.operadora.replace(/_/g, " ")}</h1>
-                                    <h2 class="Titulo__tabela-Plano">${checkedValues[x].replace(/_/g, " ").replace(" por cento", "%").replace(/b/g, "/")}</h2>
+                                    <h2 class="Titulo__tabela-Plano">${checkedValues[x].replace(/_/g, " ").replace(" por cento", "%").replace(/w/g, "/")}</h2>
                                 </div>
                                 <h1 class="valorTotalGasto">Total Gasto: R$ ${TotalGasto.toFixed(2).replace(".", ",")}</h1>
                             </div>
