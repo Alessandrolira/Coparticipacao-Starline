@@ -66,32 +66,6 @@ const valoresProcedimentos = {
             Terapia: 150
         }
     },
-    Alice: {
-        Equilibrio: {
-            Consulta: 45,
-            Exames_Especiais: 90,
-            Exames_Simples: 10,
-            Internação: 210,
-            Pronto_Socorro: 60,
-            Terapia: 35
-        },
-        Conforto: {
-            Consulta: 70,
-            Exames_Especiais: 100,
-            Exames_Simples: 15,
-            Internação: 280,
-            Pronto_Socorro: 70,
-            Terapia: 45
-        },
-        Exclusivo: {
-            Consulta: 100,
-            Exames_Especiais: 150,
-            Exames_Simples: 30,
-            Internação: 440,
-            Pronto_Socorro: 110,
-            Terapia: 60
-        }
-    },
     Amil: {
         Amil_Fácil_110: {
             Consulta: 25,
@@ -151,7 +125,7 @@ const valoresProcedimentos = {
         }
     },
     Bradesco: {
-        FECXwFCER_E_e_FQCXwFCQR_A_: {
+        FECX8FCER_E_e_FQCX8FCQR_A_: {
             Consulta: 30,
             Exames_Especiais: 120,
             Exames_Simples: 45,
@@ -159,7 +133,7 @@ const valoresProcedimentos = {
             Pronto_Socorro: 90,
             Terapia: 30
         },
-        TN1IwTERI_E_e_TN2IwTQRI_A_: {
+        TN1I8TERI_E_e_TN2I8TQRI_A_: {
             Consulta: 35,
             Exames_Especiais: 140,
             Exames_Simples: 52.50,
@@ -167,7 +141,7 @@ const valoresProcedimentos = {
             Pronto_Socorro: 105,
             Terapia: 35
         },
-        TENMwTRME_E_e_TQNMwTRMQ_A_: {
+        TENM8TRME_E_e_TQNM8TRMQ_A_: {
             Consulta: 30,
             Exames_Especiais: 120,
             Exames_Simples: 45,
@@ -191,7 +165,7 @@ const valoresProcedimentos = {
             Pronto_Socorro: 320,
             Terapia: 160
         },
-        TNEWwTRWE_E_e_TNQWwTRWQ_A_: {
+        TNEW8TRWE_E_e_TNQW8TRWQ_A_: {
             Consulta: 30,
             Exames_Especiais: 120,
             Exames_Simples: 45,
@@ -567,50 +541,57 @@ const valoresProcedimentos = {
         }
     },
     NotreDame_Intermedica: {
-        Linha_Smart: {
-            Consulta: 26,
-            Exames_Especiais: 105,
-            Exames_Simples: 21,
+        Ambulatorial: {
+            Consulta: 37.01,
+            Exames_Especiais: 106,
+            Exames_Simples: 15.90,
             Internação: 185,
-            Pronto_Socorro: 52,
-            Terapia: 83
+            Pronto_Socorro: 53,
+            Terapia: 37.01
         },
-        Linha_500: {
-            Consulta: 31,
-            Exames_Especiais: 115,
-            Exames_Simples: 26,
+        Smart_150_ao_200_UP: {
+            Consulta: 37.01,
+            Exames_Especiais: 106,
+            Exames_Simples: 15.90,
+            Internação: 185,
+            Pronto_Socorro: 53,
+            Terapia: 37.01
+        },
+        Smart_300_ao_500: {
+            Consulta: 37.01,
+            Exames_Especiais: 106,
+            Exames_Simples: 15.90,
             Internação: 260,
-            Pronto_Socorro: 62,
-            Terapia: 83
+            Pronto_Socorro: 53,
+            Terapia: 37.01
         },
-        Linha_700: {
-            Consulta: 36,
-            Exames_Especiais: 125,
-            Exames_Simples: 31,
+        Advance_600_e_700: {
+            Consulta: 37.01,
+            Exames_Especiais: 106,
+            Exames_Simples: 15.90,
             Internação: 310,
-            Pronto_Socorro: 72,
-            Terapia: 93
+            Pronto_Socorro: 53,
+            Terapia: 37.01
         },
-        Linha_900: {
-            Consulta: 43,
-            Exames_Especiais: 140,
-            Exames_Simples: 38,
+        Premium_900: {
+            Consulta: 37.01,
+            Exames_Especiais: 106,
+            Exames_Simples: 15.90,
             Internação: 540,
-            Pronto_Socorro: 80,
-            Terapia: 110
+            Pronto_Socorro: 53,
+            Terapia: 37.01
         }
     }
 }
 
 const planosPorOperadora = {
-    Alice: ["Equilibrio", "Conforto", "Exclusivo"],
     Omint: ["SC1", "C16", "C19"],
     Amil: ["Amil_Fácil_110", "Amil_Fácil_S60_e_S80", "Amil_One_S2500", "Amil_One_S6500_R1", "Amil_S380", "Amil_S450_e_S580", "Amil_S750"],
-    Bradesco: ["FECXwFCER_E_e_FQCXwFCQR_A_", "TN1IwTERI_E_e_TN2IwTQRI_A_", "TENMwTRME_E_e_TQNMwTRMQ_A_", "TNNI_E_TNMI_A_TNMM_A_e_TNMN_A_", "TPN4_A_TPN6_A_e_TCN6_A_e_TCN8_A_e_TPN8_A_e_TCNX_A_", "TNEWwTRWE_E_e_TNQWwTRWQ_A_"],
+    Bradesco: ["FECX8FCER_E_e_FQCX8FCQR_A_", "TN1I8TERI_E_e_TN2I8TQRI_A_", "TENM8TRME_E_e_TQNM8TRMQ_A_", "TNNI_E_TNMI_A_TNMM_A_e_TNMN_A_", "TPN4_A_TPN6_A_e_TCN6_A_e_TCN8_A_e_TPN8_A_e_TCNX_A_", "TNEW8TRWE_E_e_TNQW8TRWQ_A_"],
     Porto: ["LINHA_PORTO_SAUDE_P200", "LINHA_PORTO_SAUDE_P300", "LINHA_PORTO_SAUDE_P400", "LINHA_PORTO_SAUDE_P450", "LINHA_PORTO_SAUDE_P500", "LINHA_TRADICIONAL_Bronze", "LINHA_TRADICIONAL_Prata", "LINHA_TRADICIONAL_Ouro_Mais", "LINHA_TRADICIONAL_Ouro_Max", "LINHA_TRADICIONAL_Diamante_R1", "LINHA_TRADICIONAL_Diamante_R2", "LINHA_PRO_Bronze_Pro", "LINHA_PRO_Diamente_Pro", "LINHA_PRO_Ouro_Pro", "LINHA_PRO_Prata_Pro",],
     Unimed: ["COMPACTO", "COMPLETO", "EFETIVO", "SÊNIOR", "SUPERIOR", "SUPERIOR_PLUS"],
     Sulamerica: ["Clássico", "Direto", "Especial", "Exato", "Executivo", "Prestigie"],
-    NotreDame_Intermedica: ["Linha_Smart", "Linha_500", "Linha_700", "Linha_900"]
+    NotreDame_Intermedica: ["Ambulatorial", "Smart_150_ao_200_UP", "Smart_300_ao_500", "Advance_600_e_700", "Premium_900"]
 }
 
 const porcentagens = {
@@ -660,7 +641,7 @@ function mostrarPlanos() {
         planoElement.value = plano;
         planoElement.id = plano;
         planoElement.onchange = mostrarPorcentagem;
-        plano = plano.replace(/_/g, " ").replace(" por cento", "%").replace(/w/g, "/")
+        plano = plano.replace(/_/g, " ").replace(" por cento", "%").replace(/8/g, "/")
         const label = document.createElement("label");
         label.htmlFor = plano;
         label.className = "checkboxLabel"
@@ -949,7 +930,7 @@ function EnviarDados() {
                             <div class="cabecalho-tabela">
                                 <div class="cabecalho-tabela-texto">
                                     <h1 class="Titulo__tabela-Operadora">${resultado.operadora.replace(/_/g, " ")}</h1>
-                                    <h2 class="Titulo__tabela-Plano">${checkedValues[x].replace(/_/g, " ").replace(" por cento", "%").replace(/w/g, "/")}</h2>
+                                    <h2 class="Titulo__tabela-Plano">${checkedValues[x].replace(/_/g, " ").replace(" por cento", "%").replace(/8/g, "/")}</h2>
                                 </div>
                                 <h1 class="valorTotalGasto">Total Gasto: R$ ${TotalGasto.toFixed(2).replace(".", ",")}</h1>
                             </div>
