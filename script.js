@@ -40,6 +40,32 @@ function gerarPDF() {
 
 //DADOS
 const valoresProcedimentos = {
+    Alice: {
+        Equilíbrio: {
+            Consulta: 45,
+            Exames_Especiais: 90,
+            Exames_Simples: 10,
+            Internação: 210,
+            Pronto_Socorro: 60,
+            Terapia: 35
+        },
+        Conforto: {
+            Consulta: 70,
+            Exames_Especiais: 100,
+            Exames_Simples: 15,
+            Internação: 280,
+            Pronto_Socorro: 70,
+            Terapia: 45
+        },
+        Exclusivo: {
+            Consulta: 100,
+            Exames_Especiais: 150,
+            Exames_Simples: 30,
+            Internação: 440,
+            Pronto_Socorro: 110,
+            Terapia: 60
+        }
+    },
     Omint: {
         SC1: {
             Consulta: 75,
@@ -125,7 +151,7 @@ const valoresProcedimentos = {
         }
     },
     Bradesco: {
-        FECX8FCER_E_e_FQCX8FCQR_A_: {
+        FECXespcFCER_E_e_FQCXespcFCQR_A_: {
             Consulta: 30,
             Exames_Especiais: 120,
             Exames_Simples: 45,
@@ -133,7 +159,7 @@ const valoresProcedimentos = {
             Pronto_Socorro: 90,
             Terapia: 30
         },
-        TN1I8TERI_E_e_TN2I8TQRI_A_: {
+        TN1IespcTERI_E_e_TN2IespcTQRI_A_: {
             Consulta: 35,
             Exames_Especiais: 140,
             Exames_Simples: 52.50,
@@ -141,7 +167,7 @@ const valoresProcedimentos = {
             Pronto_Socorro: 105,
             Terapia: 35
         },
-        TENM8TRME_E_e_TQNM8TRMQ_A_: {
+        TENMespcTRME_E_e_TQNMespcTRMQ_A_: {
             Consulta: 30,
             Exames_Especiais: 120,
             Exames_Simples: 45,
@@ -165,7 +191,7 @@ const valoresProcedimentos = {
             Pronto_Socorro: 320,
             Terapia: 160
         },
-        TNEW8TRWE_E_e_TNQW8TRWQ_A_: {
+        TNEWespcTRWE_E_e_TNQWespcTRWQ_A_: {
             Consulta: 30,
             Exames_Especiais: 120,
             Exames_Simples: 45,
@@ -585,9 +611,10 @@ const valoresProcedimentos = {
 }
 
 const planosPorOperadora = {
+    Alice: ["Equilíbrio", "Conforto", "Exclusivo"],
     Omint: ["SC1", "C16", "C19"],
     Amil: ["Amil_Fácil_110", "Amil_Fácil_S60_e_S80", "Amil_One_S2500", "Amil_One_S6500_R1", "Amil_S380", "Amil_S450_e_S580", "Amil_S750"],
-    Bradesco: ["FECX8FCER_E_e_FQCX8FCQR_A_", "TN1I8TERI_E_e_TN2I8TQRI_A_", "TENM8TRME_E_e_TQNM8TRMQ_A_", "TNNI_E_TNMI_A_TNMM_A_e_TNMN_A_", "TPN4_A_TPN6_A_e_TCN6_A_e_TCN8_A_e_TPN8_A_e_TCNX_A_", "TNEW8TRWE_E_e_TNQW8TRWQ_A_"],
+    Bradesco: ["FECXespcFCER_E_e_FQCXespcFCQR_A_", "TN1IespcTERI_E_e_TN2IespcTQRI_A_", "TENMespcTRME_E_e_TQNMespcTRMQ_A_", "TNNI_E_TNMI_A_TNMM_A_e_TNMN_A_", "TPN4_A_TPN6_A_e_TCN6_A_e_TCN8_A_e_TPN8_A_e_TCNX_A_", "TNEWespcTRWE_E_e_TNQWespcTRWQ_A_"],
     Porto: ["LINHA_PORTO_SAUDE_P200", "LINHA_PORTO_SAUDE_P300", "LINHA_PORTO_SAUDE_P400", "LINHA_PORTO_SAUDE_P450", "LINHA_PORTO_SAUDE_P500", "LINHA_TRADICIONAL_Bronze", "LINHA_TRADICIONAL_Prata", "LINHA_TRADICIONAL_Ouro_Mais", "LINHA_TRADICIONAL_Ouro_Max", "LINHA_TRADICIONAL_Diamante_R1", "LINHA_TRADICIONAL_Diamante_R2", "LINHA_PRO_Bronze_Pro", "LINHA_PRO_Diamente_Pro", "LINHA_PRO_Ouro_Pro", "LINHA_PRO_Prata_Pro",],
     Unimed: ["COMPACTO", "COMPLETO", "EFETIVO", "SÊNIOR", "SUPERIOR", "SUPERIOR_PLUS"],
     Sulamerica: ["Clássico", "Direto", "Especial", "Exato", "Executivo", "Prestigie"],
@@ -641,7 +668,7 @@ function mostrarPlanos() {
         planoElement.value = plano;
         planoElement.id = plano;
         planoElement.onchange = mostrarPorcentagem;
-        plano = plano.replace(/_/g, " ").replace(" por cento", "%").replace(/8/g, "/")
+        plano = plano.replace(/_/g, " ").replace(" por cento", "%").replace(/espc/g, "/")
         const label = document.createElement("label");
         label.htmlFor = plano;
         label.className = "checkboxLabel"
@@ -930,7 +957,7 @@ function EnviarDados() {
                             <div class="cabecalho-tabela">
                                 <div class="cabecalho-tabela-texto">
                                     <h1 class="Titulo__tabela-Operadora">${resultado.operadora.replace(/_/g, " ")}</h1>
-                                    <h2 class="Titulo__tabela-Plano">${checkedValues[x].replace(/_/g, " ").replace(" por cento", "%").replace(/8/g, "/")}</h2>
+                                    <h2 class="Titulo__tabela-Plano">${checkedValues[x].replace(/_/g, " ").replace(" por cento", "%").replace(/espc/g, "/")}</h2>
                                 </div>
                                 <h1 class="valorTotalGasto">Total Gasto: R$ ${TotalGasto.toFixed(2).replace(".", ",")}</h1>
                             </div>
