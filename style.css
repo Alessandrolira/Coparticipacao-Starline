@@ -1,5 +1,5 @@
 .Filtro_dos_dados {
-    background-image: url('./assets/imagem/Imagem-fundo-mobile.jpg');
+    background-image: url('./assets/imagem/Imagem-Fundo-Celular.jpg');
     background-repeat: no-repeat;
     background-size: 100%;
     height: 1000px;
@@ -200,7 +200,7 @@
 @media screen and (min-width: 760px) {
 
     .Filtro_dos_dados {
-        background-image: url(./assets/imagem/Imagem-fundo-desktop.jpg);
+        background-image: url(./assets/imagem/Imagem-fundo.jpg);
     }
 
     .cabecalho {
