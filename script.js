@@ -518,52 +518,52 @@ const valoresProcedimentos = {
     },
     Sulamerica: {
         Clássico: {
-            Consulta: 40,
-            Exames_Especiais: 150,
-            Exames_Simples: 60,
-            Internação: 320,
-            Pronto_Socorro: 125,
-            Terapia: 60
+            Consulta: 41.30,
+            Exames_Especiais: 154.89,
+            Exames_Simples: 61.96,
+            Internação: 330.43,
+            Pronto_Socorro: 129.08,
+            Terapia: 61.96
         },
         Direto: {
-            Consulta: 40,
-            Exames_Especiais: 150,
-            Exames_Simples: 60,
-            Internação: 320,
-            Pronto_Socorro: 125,
-            Terapia: 60
+            Consulta: 30.98,
+            Exames_Especiais: 123.91,
+            Exames_Simples: 51.53,
+            Internação: 278.80,
+            Pronto_Socorro: 92.93,
+            Terapia: 51.63
         },
         Especial: {
-            Consulta: 75,
-            Exames_Especiais: 170,
-            Exames_Simples: 70,
-            Internação: 500,
-            Pronto_Socorro: 140,
-            Terapia: 70
+            Consulta: 77.45,
+            Exames_Especiais: 174.54,
+            Exames_Simples: 72.28,
+            Internação: 516.30,
+            Pronto_Socorro: 144.56,
+            Terapia: 72.28
         },
         Exato: {
-            Consulta: 40,
-            Exames_Especiais: 150,
-            Exames_Simples: 60,
-            Internação: 320,
-            Pronto_Socorro: 125,
-            Terapia: 60
+            Consulta: 41.30,
+            Exames_Especiais: 154.89,
+            Exames_Simples: 61.96,
+            Internação: 330.43,
+            Pronto_Socorro: 129.08,
+            Terapia: 61.96
         },
         Executivo: {
-            Consulta: 150,
-            Exames_Especiais: 200,
-            Exames_Simples: 80,
-            Internação: 570,
-            Pronto_Socorro: 320,
-            Terapia: 90
+            Consulta: 154.89,
+            Exames_Especiais: 206.52,
+            Exames_Simples: 82.61,
+            Internação: 588.58,
+            Pronto_Socorro: 330.43,
+            Terapia: 92.93
         },
         Prestigie: {
-            Consulta: 170,
-            Exames_Especiais: 350,
-            Exames_Simples: 90,
-            Internação: 700,
-            Pronto_Socorro: 350,
-            Terapia: 150
+            Consulta: 175.54,
+            Exames_Especiais: 361.41,
+            Exames_Simples: 92.93,
+            Internação: 722.82,
+            Pronto_Socorro: 361.41,
+            Terapia: 154.82
         }
     },
     NotreDame_Intermedica: {
@@ -952,14 +952,61 @@ function EnviarDados() {
 
             TotalGasto = parseFloat(valorPagoConsulta) + parseFloat(valorPagoExamesEspeciais) + parseFloat(valorPagoExamesSimples) + parseFloat(valorPagoInternacao) + parseFloat(valorPagoProntoSocorro) + parseFloat(valorPagoTerapias);
 
-            document.getElementById('tabelas' + contar_porcentagem).innerHTML = `
+            let atingiuLimitador = false
+
+            if (resultado.operadora.replace(/_/g, " ") == "Seguros Unimed"){
+
+                if(checkedValues[x].replace(/_/g, " ").replace(" por cento", "%").replace(/b/g, "/") == "COMPACTO"){
+                    if (TotalGasto > 350.00) {
+                        TotalGasto = 350.00
+                        atingiuLimitador = true
+                    }
+                }
+                if(checkedValues[x].replace(/_/g, " ").replace(" por cento", "%").replace(/b/g, "/") == "COMPLETO"){
+                    if (TotalGasto > 400.00) {
+                        TotalGasto = 400.00
+                        atingiuLimitador = true
+                    }
+                }
+                if(checkedValues[x].replace(/_/g, " ").replace(" por cento", "%").replace(/b/g, "/") == "EFETIVO"){
+                    if (TotalGasto > 350.00) {
+                        TotalGasto = 350.00
+                        atingiuLimitador = true
+                    }
+                }
+                if(checkedValues[x].replace(/_/g, " ").replace(" por cento", "%").replace(/b/g, "/") == "SÊNIOR"){
+                    if (TotalGasto > 680.00) {
+                        TotalGasto = 680.00
+                        atingiuLimitador = true
+                    }
+                }
+                if(checkedValues[x].replace(/_/g, " ").replace(" por cento", "%").replace(/b/g, "/") == "SUPERIOR"){
+                    if (TotalGasto > 450.00) {
+                        TotalGasto = 450.00
+                        atingiuLimitador = true
+                    }
+                }
+                if(checkedValues[x].replace(/_/g, " ").replace(" por cento", "%").replace(/b/g, "/") == "SUPERIOR PLUS"){
+                    if (TotalGasto > 530.00) {
+                        TotalGasto = 530.00
+                        atingiuLimitador = true
+                    }
+                }
+            }
+
+            let HTML = `
                     <table class="TabelaValores--Operadora">
                             <div class="cabecalho-tabela">
                                 <div class="cabecalho-tabela-texto">
                                     <h1 class="Titulo__tabela-Operadora">${resultado.operadora.replace(/_/g, " ")}</h1>
                                     <h2 class="Titulo__tabela-Plano">${checkedValues[x].replace(/_/g, " ").replace(" por cento", "%").replace(/espc/g, "/")}</h2>
                                 </div>
-                                <h1 class="valorTotalGasto">Total Gasto: R$ ${TotalGasto.toFixed(2).replace(".", ",")}</h1>
+                                <div id="limitadorMensal">
+                                    ${atingiuLimitador == true? 
+                                    '<h1 class="valorTotalGasto" style="color: red; text-align: right; display: block;" id="limitador">Limitador Mensal</h1>' 
+                                    : ''}
+                                    <h1 class="valorTotalGasto">Total Gasto: R$ ${TotalGasto.toFixed(2).replace(".", ",")}</h1>
+                                </div>
                             </div>
                             <tr class="
                             ">
@@ -1032,6 +1079,12 @@ function EnviarDados() {
             contar_porcentagem = contar_porcentagem + 1
             tabelasAnteriores = checkedValues
             porcentagemAnteriores = checkedValuesPlanos
+
+            console.log(resultado.operadora.replace(/_/g, " "))
+
+            //Ta gerando na hora errada
+
+            document.getElementById('tabelas' + contar_porcentagem).innerHTML = HTML
     }
 }
 
