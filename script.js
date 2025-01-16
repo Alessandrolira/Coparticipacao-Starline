@@ -650,7 +650,7 @@ const planosPorOperadora = {
     Porto: ["LINHA_PORTO_SAUDE_P200", "LINHA_PORTO_SAUDE_P300", "LINHA_PORTO_SAUDE_P400", "LINHA_PORTO_SAUDE_P450", "LINHA_PORTO_SAUDE_P500", "LINHA_TRADICIONAL_Bronze", "LINHA_TRADICIONAL_Prata", "LINHA_TRADICIONAL_Ouro_Mais", "LINHA_TRADICIONAL_Ouro_Max", "LINHA_TRADICIONAL_Diamante_R1", "LINHA_TRADICIONAL_Diamante_R2", "LINHA_PRO_Bronze_Pro", "LINHA_PRO_Diamente_Pro", "LINHA_PRO_Ouro_Pro", "LINHA_PRO_Prata_Pro",],
     Unimed: ["COMPACTO", "COMPLETO", "EFETIVO", "SÊNIOR", "SUPERIOR", "SUPERIOR_PLUS"],
     Sulamerica: ["Clássico", "Direto", "Especial", "Exato", "Executivo", "Prestigie"],
-    NotreDame_Intermedica: ["Ambulatorial", "Nosso_Medico", "Smart_150", "Smart_300_ao_Smart_500", "Advance_600_e_Avanced_700", "Premium_900"]
+    NotreDame_Intermedica: ["Ambulatorial", "Nosso_Medico", "Smart_150", "Smart_200", "Smart_300_ao_Smart_500", "Advance_600_e_Avanced_700", "Premium_900"]
 }
 
 const porcentagens = {
