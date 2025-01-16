@@ -93,61 +93,77 @@ const valoresProcedimentos = {
         }
     },
     Amil: {
-        Amil_Fácil_110: {
-            Consulta: 25,
-            Exames_Especiais: 100,
-            Exames_Simples: 20,
-            Internação: 180,
-            Pronto_Socorro: 50,
-            Terapia: 50
-        },
-        Amil_Fácil_S60_e_S80: {
-            Consulta: 25,
-            Exames_Especiais: 100,
-            Exames_Simples: 20,
-            Internação: 180,
-            Pronto_Socorro: 50,
-            Terapia: 50
-        },
-        Amil_One_S2500: {
-            Consulta: 70,
-            Exames_Especiais: 150,
-            Exames_Simples: 45,
-            Internação: 450,
-            Pronto_Socorro: 140,
-            Terapia: 90
-        },
-        Amil_One_S6500_R1: {
-            Consulta: 70,
-            Exames_Especiais: 150,
-            Exames_Simples: 45,
-            Internação: 450,
-            Pronto_Socorro: 140,
-            Terapia: 100
-        },
-        Amil_S380: {
+        Bronze_e_Bronze_Mais: {
             Consulta: 30,
-            Exames_Especiais: 110,
-            Exames_Simples: 25,
-            Internação: 200,
-            Pronto_Socorro: 60,
+            Exames_Especiais: 100,
+            Exames_Simples: 20,
+            Internação: 180,
+            Pronto_Socorro: 80,
             Terapia: 60
         },
-        Amil_S450_e_S580: {
+        Prata_e_Ouro: {
             Consulta: 30,
             Exames_Especiais: 110,
             Exames_Simples: 25,
             Internação: 220,
-            Pronto_Socorro: 60,
+            Pronto_Socorro: 90,
             Terapia: 60
         },
-        Amil_S750: {
-            Consulta: 35,
+        Platinum_e_Platinum_Mais: {
+            Consulta: 55,
             Exames_Especiais: 130,
             Exames_Simples: 35,
-            Internação: 370,
-            Pronto_Socorro: 70,
+            Internação: 400,
+            Pronto_Socorro: 130,
             Terapia: 70
+        },
+        Black: {
+            Consulta: 90,
+            Exames_Especiais: 150,
+            Exames_Simples: 45,
+            Internação: 550,
+            Pronto_Socorro: 200,
+            Terapia: 90
+        },
+        S80: {
+            Consulta: 25,
+            Exames_Especiais: 100,
+            Exames_Simples: 20,
+            Internação: 180,
+            Pronto_Socorro: 50,
+            Terapia: 50
+        },
+        S380: {
+            Consulta: 30,
+            Exames_Especiais: 110,
+            Exames_Simples: 25,
+            Internação: 220,
+            Pronto_Socorro: 80,
+            Terapia: 60
+        },
+        S450: {
+            Consulta: 30,
+            Exames_Especiais: 110,
+            Exames_Simples: 25,
+            Internação: 220,
+            Pronto_Socorro: 90,
+            Terapia: 60
+        },
+        S750: {
+            Consulta: 55,
+            Exames_Especiais: 130,
+            Exames_Simples: 35,
+            Internação: 400,
+            Pronto_Socorro: 130,
+            Terapia: 70
+        },
+        S2500: {
+            Consulta: 90,
+            Exames_Especiais: 150,
+            Exames_Simples: 45,
+            Internação: 550,
+            Pronto_Socorro: 200,
+            Terapia: 90
         }
     },
     Bradesco: {
@@ -568,44 +584,60 @@ const valoresProcedimentos = {
     },
     NotreDame_Intermedica: {
         Ambulatorial: {
-            Consulta: 37.01,
-            Exames_Especiais: 106,
-            Exames_Simples: 15.90,
+            Consulta: 40.39,
+            Exames_Especiais: 116.60,
+            Exames_Simples: 47.70,
+            Internação: 0,
+            Pronto_Socorro: 57.24,
+            Terapia: 37.01
+        },
+        Nosso_Medico: {
+            Consulta: 40.39,
+            Exames_Especiais: 116.60,
+            Exames_Simples: 47.70,
+            Internação: 196.10,
+            Pronto_Socorro: 57.24,
+            Terapia: 37.01
+        },
+        Smart_150: {
+            Consulta: 40.39,
+            Exames_Especiais: 116.60,
+            Exames_Simples: 47.70,
+            Internação: 196.10,
+            Pronto_Socorro: 57.24,
+            Terapia: 39.33
+        },
+        Smart_200: {
+            Consulta: 30,
+            Exames_Especiais: 100,
+            Exames_Simples: 20,
             Internação: 185,
-            Pronto_Socorro: 53,
-            Terapia: 37.01
+            Pronto_Socorro: 80,
+            Terapia: 40
         },
-        Smart_150_ao_200_UP: {
-            Consulta: 37.01,
-            Exames_Especiais: 106,
-            Exames_Simples: 15.90,
-            Internação: 185,
-            Pronto_Socorro: 53,
-            Terapia: 37.01
+        Smart_300_ao_Smart_500: {
+            Consulta: 40.39,
+            Exames_Especiais: 116.60,
+            Exames_Simples: 47.70,
+            Internação: 275.60,
+            Pronto_Socorro: 57.24,
+            Terapia: 39.33
         },
-        Smart_300_ao_500: {
-            Consulta: 37.01,
-            Exames_Especiais: 106,
-            Exames_Simples: 15.90,
-            Internação: 260,
-            Pronto_Socorro: 53,
-            Terapia: 37.01
-        },
-        Advance_600_e_700: {
-            Consulta: 37.01,
-            Exames_Especiais: 106,
-            Exames_Simples: 15.90,
-            Internação: 310,
-            Pronto_Socorro: 53,
-            Terapia: 37.01
+        Advance_600_e_Avanced_700: {
+            Consulta: 40.39,
+            Exames_Especiais: 116.60,
+            Exames_Simples: 47.70,
+            Internação: 328.60,
+            Pronto_Socorro: 57.24,
+            Terapia: 39.33
         },
         Premium_900: {
-            Consulta: 37.01,
-            Exames_Especiais: 106,
-            Exames_Simples: 15.90,
-            Internação: 540,
-            Pronto_Socorro: 53,
-            Terapia: 37.01
+            Consulta: 40.39,
+            Exames_Especiais: 116.60,
+            Exames_Simples: 47.70,
+            Internação: 572.40,
+            Pronto_Socorro: 57.24,
+            Terapia: 39.33
         }
     }
 }
@@ -613,12 +645,12 @@ const valoresProcedimentos = {
 const planosPorOperadora = {
     Alice: ["Equilíbrio", "Conforto", "Exclusivo"],
     Omint: ["SC1", "C16", "C19"],
-    Amil: ["Amil_Fácil_110", "Amil_Fácil_S60_e_S80", "Amil_One_S2500", "Amil_One_S6500_R1", "Amil_S380", "Amil_S450_e_S580", "Amil_S750"],
+    Amil: ["Bronze_e_Bronze_Mais", "Prata_e_Ouro", "Platinum_e_Platinum_Mais", "Black", "S80", "S380", "S450", "S750", "S2500"],
     Bradesco: ["FECXespcFCER_E_e_FQCXespcFCQR_A_", "TN1IespcTERI_E_e_TN2IespcTQRI_A_", "TENMespcTRME_E_e_TQNMespcTRMQ_A_", "TNNI_E_TNMI_A_TNMM_A_e_TNMN_A_", "TPN4_A_TPN6_A_e_TCN6_A_e_TCN8_A_e_TPN8_A_e_TCNX_A_", "TNEWespcTRWE_E_e_TNQWespcTRWQ_A_"],
     Porto: ["LINHA_PORTO_SAUDE_P200", "LINHA_PORTO_SAUDE_P300", "LINHA_PORTO_SAUDE_P400", "LINHA_PORTO_SAUDE_P450", "LINHA_PORTO_SAUDE_P500", "LINHA_TRADICIONAL_Bronze", "LINHA_TRADICIONAL_Prata", "LINHA_TRADICIONAL_Ouro_Mais", "LINHA_TRADICIONAL_Ouro_Max", "LINHA_TRADICIONAL_Diamante_R1", "LINHA_TRADICIONAL_Diamante_R2", "LINHA_PRO_Bronze_Pro", "LINHA_PRO_Diamente_Pro", "LINHA_PRO_Ouro_Pro", "LINHA_PRO_Prata_Pro",],
     Unimed: ["COMPACTO", "COMPLETO", "EFETIVO", "SÊNIOR", "SUPERIOR", "SUPERIOR_PLUS"],
     Sulamerica: ["Clássico", "Direto", "Especial", "Exato", "Executivo", "Prestigie"],
-    NotreDame_Intermedica: ["Ambulatorial", "Smart_150_ao_200_UP", "Smart_300_ao_500", "Advance_600_e_700", "Premium_900"]
+    NotreDame_Intermedica: ["Ambulatorial", "Nosso_Medico", "Smart_150", "Smart_300_ao_Smart_500", "Advance_600_e_Avanced_700", "Premium_900"]
 }
 
 const porcentagens = {
